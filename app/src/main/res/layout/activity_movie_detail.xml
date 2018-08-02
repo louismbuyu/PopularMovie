@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoviesData.MovieDetailActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorAccent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="8dp"
+                    android:text="CHAPPIE"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="30sp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/infoLayout"
+                android:layout_below="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="0dp">
+
+                <ImageView
+                    android:id="@+id/main_image_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/release_date_tv"
+                        android:text="2015"
+                        android:textSize="24sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:id="@+id/durationTextView"
+                        android:text="120min"
+                        android:textSize="20sp"
+                        android:layout_below="@+id/release_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        />
+                    <TextView
+                        android:id="@+id/rating_tv"
+                        android:text="8.4/20"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_below="@+id/durationTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="2dp"
+                        />
+                    <Button
+                        android:id="@+id/favouriteBtn"
+                        android:layout_below="@+id/rating_tv"
+                        android:text="Mark as favourite"
+                        android:textColor="#ffffff"
+                        android:background="@color/colorAccent"
+                        android:layout_width="100dp"
+                        android:textSize="12sp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:onClick="onClickAddMovie"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/plot_id"
+                android:text="@string/plot"
+                android:textStyle="bold"
+                android:layout_below="@+id/infoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/plot_tv"
+                android:layout_below="@+id/plot_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                />
+
+            <TextView
+                android:id="@+id/trailer_id"
+                android:text="Trailers"
+                android:textStyle="bold"
+                android:layout_below="@+id/plot_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/trailer_1_tv"
+                android:layout_below="@+id/trailer_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:text="Click here to view all trailers"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="italic"
+                android:onClick="viewTrailerOne"
+                />
+
+            <TextView
+                android:id="@+id/review_id"
+                android:text="Reviews"
+                android:textStyle="bold"
+                android:layout_below="@+id/trailer_1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/review_tv"
+                android:layout_below="@+id/review_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:text="Click here to view all reviews"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="italic"
+                android:onClick="viewReviews"
+                />
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

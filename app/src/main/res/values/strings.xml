@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="plot">plot</string>
+    <string name="author">Author:</string>
+    <string name="filter">filter</string>
+    <string name="movieimage">movieImage</string>
+    <string name="title">Title</string>
+    <string name="rating">Rating</string>
+    <string name="release_date">Release date</string>
+    <string name="filters">Filters</string>
+    <string name="most_popular_first">Most popular first</string>
+    <string name="highest_rated_first">Highest rated first</string>
+    <string name="favourites">Favourites</string>
+    <string name="THE_MOVIE_DB_API_TOKEN">XXXXX</string>
+</resources>
